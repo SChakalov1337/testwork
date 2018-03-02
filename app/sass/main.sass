@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i')
 @import url(http://allfont.ru/allfont.css?fonts=freestyle-script-normal)
+
 body
 	font-family: 'Open Sans', sans-serif
 	font-size: 20px
@@ -10,22 +11,35 @@ body
 	padding: 0px
 	margin: 0px 
 	
-	 
-	
+.clearfix
+	&:after
+		content: ""
+		display: table
+		clear: both
+
 .wrapper
 	max-width: 1170px
 	margin: 0 auto
-
+#header.default
+	position: fixed
+	text-align: center
+	background-color: #FFF
+	height: 100px
+	width: 100%  
 #header
+
 	z-index: 99999  
 	text-align: center  
 	height: 100px
-	.default
-		position: fixed 
+	overflow: hidden 
 		
 	img
-		padding-top: 16px 
-	.nav1
+		display: inline-block 
+		max-width: 100%
+		height: auto 
+		padding-top: 16px
+		
+	.navleft
 		margin-left: 124px 
 		font-size: 13px 
 		font-weight: 900  
@@ -59,7 +73,7 @@ body
 		li
 			display: inline-block
 			margin-left: 30px
-	.nav2
+	.navright
 		font-size: 13px 
 		font-weight: 900  
 		text-align: right 
@@ -103,11 +117,10 @@ body
 	background-image: url(../img/bg.png)
 	background-repeat: no-repeat
 	background-position: top
-	height: 6000px 
-	margin: 0 
 	
+	margin: 0 
+	overflow: hidden
 	.form
-		position: relative  
 		text-align: left
 		height: 391px
 		width: 300px
@@ -121,18 +134,19 @@ body
 		 
 	
 	.leftside
-		position: absolute 
+		max-width: 22% 
+		position: relative 
 		float: left
 		padding-left: 240px 
 		padding-top: 100px
-		padding-right: 90px
+		margin-right: 90px
 		margin-bottom: 110px    
 		
 	.rightside
 		float: right
-		width: 46%	  
+		max-width: 50%	  
 		padding-top: 175px 
-		padding-left: 90px 
+		margin-right: 60px  
 	h2
 		font-family: 'Open Sans Bold', sans-serif
 		font-size: 48px 
@@ -229,3 +243,183 @@ body
 		color: #FFF
 		&:hover
 			background-color: #475bf1
+.program
+	padding-top: 125px
+	background-color: #FFF
+	text-align: center 
+	height: 100% 
+	padding-bottom: 75px 
+	h2
+		color: 5b6ceb
+		font-family: 'Open Sans Bold', sans-serif
+		font-size: 30px
+		-webkit-margin-before: 0px
+		-webkit-margin-after: 25px
+		-webkit-margin-start: 0px
+		-webkit-margin-end: 0px
+
+	h3
+		color: #777777  
+		font-family: 'Freestyle Script Regular', sans-serif
+		font-size: 40px
+		-webkit-margin-before: 0px
+		-webkit-margin-after: 75px
+		-webkit-margin-start: 0px
+		-webkit-margin-end: 0px
+		font-weight: normal
+	.container
+		padding-bottom:  25px
+		display: flex 
+		-webkit-justify-content: space-between 
+		 justify-content: space-between  
+		width: 100% 
+		
+		//.boxone, .boxthree
+		//	margin-right: 30px 
+		.boxone, .boxtwo, .boxthree, .boxfour
+			max-width: 570px
+			display: flex
+			max-height: 300px 
+			
+			img
+				width: 270px
+				max-height: 300px 
+			.textarea
+				padding-left: 30px 
+				padding-top: 50px
+				background-color: #fff  
+				
+				h2
+					font-family: 'Open Sans Bold', sans-serif
+					font-size: 20px
+					-webkit-margin-before: 0px
+					-webkit-margin-after: 36px
+					-webkit-margin-start: 0px
+					-webkit-margin-end: 0px
+					color: #777777 
+				p
+					font-family: 'Open Sans', sans-serif
+					font-size: 14px
+					-webkit-margin-before: 0px
+					-webkit-margin-after: 0px
+					-webkit-margin-start: 0px
+					-webkit-margin-end: 0px
+					color: #C2C2C2 
+				span
+					color: #606060
+					
+					-webkit-margin-before: 0px
+					-webkit-margin-after: 180px
+					-webkit-margin-start: 0px
+					-webkit-margin-end: 0px
+.gallery
+	position: relative
+	height: 670px 
+	*
+		box-sizing: border-box
+	label[for]
+		cursor: pointer
+	
+
+	input[type="checkbox"]
+		display: none
+	
+
+	.lightbox, .grid 
+		width: 100%
+		position: absolute
+		top: 0
+		left: 0
+
+	.lightbox 
+		z-index: 1
+		min-height: 100%
+		overflow: hidden
+		-webkit-transform: scale(0)
+		  -ms-transform: scale(0)
+		  transform: scale(0)
+		-webkit-transition: -webkit-transform .5s ease-out
+		  transition: transform .5s ease-out
+	
+	.lightbox img 
+		position: fixed
+		top: 50%
+		left: 50%
+		max-width: 100%
+		max-height: 100%
+		-webkit-transform: translate(-50%, -50%)
+		  -ms-transform: translate(-50%, -50%)
+			  transform: translate(-50%, -50%)
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25)
+	
+	input[type="checkbox"]:checked + .lightbox 
+		-webkit-transform: scale(1)
+		  -ms-transform: scale(1)
+			  transform: scale(1)
+	
+	input[type="checkbox"]:checked ~ .grid 
+		opacity: .125
+	
+
+	.grid 
+		display: -webkit-box
+		display: -webkit-flex
+		display: -ms-flexbox
+		display: flex
+		-webkit-flex-wrap: wrap
+		  -ms-flex-wrap: wrap
+		  flex-wrap: wrap
+		-webkit-box-align: start
+		-webkit-align-items: flex-start
+		  -ms-flex-align: start
+		  align-items: flex-start
+		-webkit-align-content: flex-start
+		  -ms-flex-line-pack: start
+		  align-content: flex-start
+		z-index: 0
+		height: 100%
+		padding: 0
+		overflow: hidden
+		background-color: #222
+		text-align: center
+		-webkit-transition: opacity .75s
+			 transition: opacity .75s
+
+		.grid-item 
+			overflow: hidden 
+			display: inline-block
+			width: 25%
+			height: auto 
+			margin-bottom: -3px 
+			padding: 0
+			opacity: 1
+			-webkit-transition: opacity .5s, 
+			  transition: opacity .5s
+	
+		.grid-item
+			&:hover
+				opacity: .75
+				&:before
+					opacity: 1 
+					height: 100% 
+					background-color: #7b89ee
+					background-image: url(../img/lupa.png)
+					background-repeat: no-repeat
+					background-position: center
+				
+	
+	@media screen and (max-width: 1024px) 
+		.grid .grid-item 
+			width: 50%
+	  
+	
+	@media screen and (max-width: 480px) 
+		.grid .grid-item 
+			width: 100%
+	  
+	
+	.grid img 
+		max-width: 100%
+		max-height: 100%
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25)
+	
