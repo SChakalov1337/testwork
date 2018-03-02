@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i");
+@import url(http://allfont.ru/allfont.css?fonts=freestyle-script-normal);
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 0px;
+  margin: 0px; }
+
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto; }
+
+#header {
+  z-index: 99999;
+  text-align: center;
+  height: 100px; }
+  #header .default {
+    position: fixed; }
+  #header img {
+    padding-top: 16px; }
+  #header .nav1 {
+    margin-left: 124px;
+    font-size: 13px;
+    font-weight: 900;
+    text-align: right;
+    float: left;
+    height: 100px;
+    padding-top: 43px; }
+    #header .nav1 a {
+      color: #666666;
+      text-decoration: none;
+      position: relative; }
+      #header .nav1 a:hover {
+        color: #6666cc;
+        text-decoration: none; }
+        #header .nav1 a:hover:after {
+          margin-left: 25%;
+          color: green;
+          display: block;
+          width: 50%;
+          height: 1px;
+          background-color: #6666cc;
+          content: '';
+          position: absolute; }
+    #header .nav1 ul {
+      float: left;
+      -webkit-margin-before: 0px;
+      -webkit-margin-after: 0px;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+      -webkit-padding-start: 0px; }
+    #header .nav1 li {
+      display: inline-block;
+      margin-left: 30px; }
+  #header .nav2 {
+    font-size: 13px;
+    font-weight: 900;
+    text-align: right;
+    padding-right: 190px;
+    float: right;
+    padding-top: 43px; }
+    #header .nav2 a {
+      color: #666666;
+      text-decoration: none;
+      position: relative; }
+      #header .nav2 a:hover {
+        color: #6666cc;
+        text-decoration: none; }
+        #header .nav2 a:hover:after {
+          margin-left: 25%;
+          color: green;
+          display: block;
+          width: 50%;
+          height: 1px;
+          background-color: #6666cc;
+          content: '';
+          position: absolute; }
+    #header .nav2 ul {
+      float: left;
+      -webkit-margin-before: 0px;
+      -webkit-margin-after: 0px;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+      -webkit-padding-start: 0px; }
+    #header .nav2 li {
+      display: inline-block;
+      margin-right: 30px; }
+
+.firstscreen {
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 6000px;
+  margin: 0; }
+  .firstscreen .form {
+    position: relative;
+    text-align: left;
+    height: 391px;
+    width: 300px;
+    background-color: #FFF;
+    -webkit-border-radius: 20px;
+      -webkit-border-radius-border-radius: 20px;
+    margin: 0;
+    padding-top: 40px;
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15); }
+  .firstscreen .leftside {
+    position: absolute;
+    float: left;
+    padding-left: 240px;
+    padding-top: 100px;
+    padding-right: 90px;
+    margin-bottom: 110px; }
+  .firstscreen .rightside {
+    float: right;
+    width: 46%;
+    padding-top: 175px;
+    padding-left: 90px; }
+  .firstscreen h2 {
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 48px;
+    line-height: 60px;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    color: #FFF; }
+  .firstscreen p {
+    font-family: 'Freestyle Script Regular', sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+    color: #FFF; }
+  .firstscreen h3 {
+    font-family: 'Open Sans Semibold', sans-serif;
+    font-size: 25px;
+    color: #6666cc;
+    margin-left: 35px;
+    margin-bottom: 30px; }
+  .firstscreen #applicationName, .firstscreen #applicationTelephone {
+    margin-left: 30px;
+    padding-left: 10px;
+    margin-bottom: 17px;
+    width: 230px;
+    height: 50px;
+    border: 0px;
+    -webkit-border-radius: 6px;
+      -webkit-border-radius-border-radius: 6px;
+    background-color: #f2f2f2;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #9D9D9D; }
+    .firstscreen #applicationName::placeholder, .firstscreen #applicationTelephone::placeholder {
+      color: #9D9D9D; }
+    .firstscreen #applicationName:focus, .firstscreen #applicationTelephone:focus {
+      outline: none;
+      border: 0px solid; }
+  .firstscreen .selectform {
+    padding-left: 10px;
+    margin-left: 30px;
+    width: 220px;
+    height: 50px;
+    border: 0px;
+    -webkit-border-radius: 6px;
+      -webkit-border-radius-border-radius: 6px;
+    padding-right: 10px;
+    position: relative;
+    background-color: #f2f2f2; }
+    .firstscreen .selectform:after {
+      content: "";
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: #636363 transparent transparent transparent;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      margin-top: -2px; }
+    .firstscreen .selectform select {
+      -webkit-appearance: none;
+        -webkit-appearance--moz-appearance: none;
+        -webkit-appearance-appearance: none;
+      width: 100%;
+      height: 50px;
+      border: 0px;
+      -webkit-border-radius: 6px;
+        -webkit-border-radius-border-radius: 6px;
+      background-color: #f2f2f2;
+      color: #9D9D9D;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      outline: none; }
+      .firstscreen .selectform select:focus {
+        outline: none;
+        border: 0px solid; }
+  .firstscreen button {
+    float: right;
+    margin-right: 35px;
+    width: 170px;
+    height: 50px;
+    border: 0;
+    background-color: #5b6ceb;
+    -webkit-border-radius: 6px;
+      -webkit-border-radius-border-radius: 6px;
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 16px;
+    color: #FFF; }
+    .firstscreen button:hover {
+      background-color: #475bf1; }

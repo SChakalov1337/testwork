@@ -2,9 +2,72 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/jquery.1.7.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// Фикмированная шапка при скролле
+			$("#header").removeClass("default");
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 20) {
+					$("#header").addClass("default").fadeIn('fast');
+				} else {
+					$("#header").removeClass("default").fadeIn('fast');
+				};
+			});
+		});
+	</script>
+	<title></title>
 </head>
 <body>
-	
+	<div id="header" class="head">
+		<div class="wrapper">
+			<div class="nav1">
+				<ul>
+					<li><a href="#">About us</a></li>
+					<li><a href="#">Reservation</a></li>
+					<li><a href="#">Gallery</a></li>
+				</ul>
+			</div>
+			<img src="img/logo.png" alt="">
+			<div class="nav2">
+				<ul>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Elements</a></li>
+					<li><a href="#">Shop</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="firstscreen">
+		<div class="wrapper">
+			<div class="leftside">
+				<div class="form">
+					<h3>Trial Class</h3>
+					<form id="application" action=" application.php" method="POST" name=" application ">
+					   <input name="name" id="applicationName" maxlength="20" placeholder="Enter your name" required />
+					   <input name="telephone" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Enter yoyr phone" required/>
+					   <div class="selectform">
+						   <select class="applicationClass" name="applicationClass">
+						      <option value="Тарифный план: Стартовый">choise your class</option>
+						      <option value="Тарифный план: Оптимальный">Оптимальный</option>
+						      <option value="Тарифный план: VIP">VIP</option>
+						   </select>
+					   </div>
+					   
+					   <br>
+					   <button class="applicationButton" type="submit" form="application">Try it </button>
+					</form>
+				</div>
+			</div>
+			<div class="rightside">
+				<h2>JUST BALANCE <br> YOUR MIND & BODY</h2>
+				<p>Create the healthy living 
+					<br> for yourself</p>
+			</div>
+			
+			
+		</div>
+	</div>
 </body>
 </html>
