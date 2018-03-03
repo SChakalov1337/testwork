@@ -250,7 +250,7 @@ body
 	height: 100% 
 	padding-bottom: 75px 
 	h2
-		color: 5b6ceb
+		color: #5b6ceb
 		font-family: 'Open Sans Bold', sans-serif
 		font-size: 30px
 		-webkit-margin-before: 0px
@@ -296,7 +296,7 @@ body
 					-webkit-margin-after: 36px
 					-webkit-margin-start: 0px
 					-webkit-margin-end: 0px
-					color: #777777 
+					color: #777777
 				p
 					font-family: 'Open Sans', sans-serif
 					font-size: 14px
@@ -362,50 +362,40 @@ body
 	
 
 	.grid 
-		display: -webkit-box
-		display: -webkit-flex
-		display: -ms-flexbox
 		display: flex
-		-webkit-flex-wrap: wrap
-		  -ms-flex-wrap: wrap
-		  flex-wrap: wrap
-		-webkit-box-align: start
-		-webkit-align-items: flex-start
-		  -ms-flex-align: start
-		  align-items: flex-start
-		-webkit-align-content: flex-start
-		  -ms-flex-line-pack: start
-		  align-content: flex-start
+		flex-wrap: wrap  
+		align-items: flex-start
+		 align-content: flex-start  
 		z-index: 0
-		height: 100%
-		padding: 0
 		overflow: hidden
 		background-color: #222
 		text-align: center
-		-webkit-transition: opacity .75s
-			 transition: opacity .75s
+		transition: opacity .75s
 
 		.grid-item 
 			overflow: hidden 
 			display: inline-block
 			width: 25%
-			height: auto 
-			margin-bottom: -3px 
-			padding: 0
+			height: 230px 
 			opacity: 1
 			-webkit-transition: opacity .5s, 
 			  transition: opacity .5s
 	
 		.grid-item
+			position: relative
 			&:hover
 				opacity: .75
 				&:before
-					opacity: 1 
+					opacity: .5
 					height: 100% 
 					background-color: #7b89ee
 					background-image: url(../img/lupa.png)
 					background-repeat: no-repeat
 					background-position: center
+					content: ''
+					color: green
+					display: block
+					position: absolute   
 				
 	
 	@media screen and (max-width: 1024px) 
@@ -419,7 +409,29 @@ body
 	  
 	
 	.grid img 
-		max-width: 100%
-		max-height: 100%
+		width: 100%
+		height: 100%
+		object-fit: cover 
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25)
-	
+.aboutus
+	height: 550px
+	display: flex
+	.textarea
+		padding-top: 150px 
+		width: 45%
+	h2
+		font-family: 'Open Sans Bold', sans-serif
+		font-size: 30px
+		-webkit-margin-before: 0px
+		-webkit-margin-after: 36px
+		-webkit-margin-start: 0px
+		-webkit-margin-end: 0px
+		color: #5b6ceb
+	p
+		font-family: 'Open Sans Regular', sans-serif
+		font-size: 14px
+		-webkit-margin-before: 0px
+		-webkit-margin-after: 0px
+		-webkit-margin-start: 0px
+		-webkit-margin-end: 0px
+		color: #777777
