@@ -277,9 +277,10 @@ body
 		//.boxone, .boxthree
 		//	margin-right: 30px 
 		.boxone, .boxtwo, .boxthree, .boxfour
-			max-width: 570px
+			width: 570px
 			display: flex
-			max-height: 300px 
+			max-height: 300px
+			box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.1)
 			
 			img
 				width: 270px
@@ -287,13 +288,14 @@ body
 			.textarea
 				padding-left: 30px 
 				padding-top: 50px
-				background-color: #fff  
+				background-color: #fff 
+				padding-right: 50px  
 				
 				h2
 					font-family: 'Open Sans Bold', sans-serif
 					font-size: 20px
 					-webkit-margin-before: 0px
-					-webkit-margin-after: 36px
+					-webkit-margin-after: 15px
 					-webkit-margin-start: 0px
 					-webkit-margin-end: 0px
 					color: #777777
@@ -314,7 +316,7 @@ body
 					-webkit-margin-end: 0px
 .gallery
 	position: relative
-	height: 670px 
+	height: 740px 
 	*
 		box-sizing: border-box
 	label[for]
@@ -365,7 +367,7 @@ body
 		display: flex
 		flex-wrap: wrap  
 		align-items: flex-start
-		 align-content: flex-start  
+		align-content: flex-start  
 		z-index: 0
 		overflow: hidden
 		background-color: #222
@@ -376,26 +378,24 @@ body
 			overflow: hidden 
 			display: inline-block
 			width: 25%
-			height: 230px 
+			height: 370px 
 			opacity: 1
-			-webkit-transition: opacity .5s, 
-			  transition: opacity .5s
+			transition: opacity .5s
+			position: relative
 	
 		.grid-item
 			position: relative
-			&:hover
-				opacity: .75
-				&:before
-					opacity: .5
-					height: 100% 
-					background-color: #7b89ee
-					background-image: url(../img/lupa.png)
-					background-repeat: no-repeat
-					background-position: center
-					content: ''
-					color: green
-					display: block
-					position: absolute   
+			&:hover:before
+				display: block
+				position: absolute
+				content: ''
+				opacity: 1 
+				height: 100% 
+				width: 100%
+				background-color: rgba(123, 137, 238, 0.5)
+				background-image: url(../img/lupa.png)
+				background-repeat: no-repeat
+				background-position: center   
 				
 	
 	@media screen and (max-width: 1024px) 
@@ -414,11 +414,13 @@ body
 		object-fit: cover 
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25)
 .aboutus
+	padding-top: 128px 
 	height: 550px
-	display: flex
+	
 	.textarea
-		padding-top: 150px 
-		width: 45%
+		padding-top: 25px  
+		width: 50%
+		padding-right: 100px 
 	h2
 		font-family: 'Open Sans Bold', sans-serif
 		font-size: 30px
@@ -435,3 +437,220 @@ body
 		-webkit-margin-start: 0px
 		-webkit-margin-end: 0px
 		color: #777777
+	.wrapper
+		display: flex
+		
+	
+		.karusel
+			width: 50%
+			
+.feture
+	background-image: url(../img/bgf.png)
+	background-repeat: no-repeat
+	background-position: top
+	height: 800px
+	 
+	.wrapper
+		display: flex
+		-webkit-flex-wrap: wrap 
+		-ms-flex-wrap: wrap 
+		flex-wrap: wrap
+		padding-top: 125px 
+		.cont
+			text-align: center 
+			width: 25% 
+			line-height: 1.5
+			padding-bottom: 60px 
+			h3
+				font-family: 'Open Sans Bold', sans-serif
+				font-size: 18px
+				-webkit-margin-before: 25px
+				-webkit-margin-after: 25px
+				-webkit-margin-start: 0px
+				-webkit-margin-end: 0px
+				color: #fff
+			p
+				font-family: 'Open Sans Regular', sans-serif
+				font-size: 16px
+				-webkit-margin-before: 0px
+				-webkit-margin-after: 0px
+				-webkit-margin-start: 0px
+				-webkit-margin-end: 0px
+				color: #fff
+.prices
+	height: 1156px 
+	.wrapper
+		.items
+			-webkit-flex-wrap: wrap 
+			-ms-flex-wrap: wrap 
+			flex-wrap: wrap
+			display: flex 
+			-webkit-justify-content: space-between 
+			justify-content: space-between 
+			padding-top: 100px
+			
+			.item
+				
+				width: 370px 
+				box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1)
+				-webkit-border-radius: 10px 
+				border-radius: 10px
+				text-align: center
+				position: relative
+				
+				&:hover .hd
+					background-color: #475bf1
+				.rast
+					padding-bottom: 100px
+					&:hover .hd
+						background-color: #5b6ceb 
+
+				button
+					
+					bottom: 50px
+					position: absolute 
+					left: 100px 
+						
+					width: 170px
+					height: 50px
+					border: 0  
+					background-color: #5b6ceb
+					-webkit-border-radius: 20px 
+					 border-radius: 20px  
+					font-family: 'Open Sans Bold', sans-serif
+					font-size: 16px
+					color: #FFF
+					&:hover
+						background-color: #475bf1
+					
+				.txt
+					background-color: #FFF 
+					padding-top: 25px
+					padding-bottom: 25px 
+					p
+
+						font-family: 'Open Sans Regular', sans-serif
+						font-size: 18px
+						-webkit-margin-before: 25px
+						-webkit-margin-after: 25px
+						-webkit-margin-start: 0px
+						-webkit-margin-end: 0px
+						color: #777777
+					hr
+						color: #777777 
+						width: 30%
+					
+
+				.hd
+					padding-top: 50px 
+					display: flex
+					-webkit-justify-content: center 
+					justify-content: center 
+					border-radius: 10px 10px 0 0 
+					height: 100px
+					width: 100%  
+					background-color: #5b6ceb
+					
+					h3
+						font-family: 'Open Sans Bold', sans-serif
+						font-size: 67px
+						-webkit-margin-before: 0px
+						-webkit-margin-after: 0px
+						-webkit-margin-start: 0px
+						-webkit-margin-end: 0px
+						color: #fff
+					p
+						padding-top: 10px 
+						font-family: 'Open Sans Bold', sans-serif
+						font-size: 32px
+						-webkit-margin-before: 0px
+						-webkit-margin-after: 0px
+						-webkit-margin-start: 0px
+						-webkit-margin-end: 0px
+						color: #fff
+					h4
+						font-family: 'Open Sans Bold', sans-serif
+						font-size: 32px
+						-webkit-margin-before: 0px
+						-webkit-margin-after: 0px
+						-webkit-margin-start: 0px
+						-webkit-margin-end: 0px
+						color: #fff
+.foot
+	height: 450px
+	background-color: #5B6CEB
+	color: #fff 
+	
+	.wrapper
+
+		display: flex
+		-webkit-flex-wrap: wrap 
+		  -ms-flex-wrap: wrap 
+		  flex-wrap: wrap   
+		h3
+			font-family: 'Open Sans Bold', sans-serif
+			font-size: 18px
+			-webkit-margin-before: 100px
+			-webkit-margin-after: 60px
+			-webkit-margin-start: 0px
+			-webkit-margin-end: 0px
+		p
+			font-family: 'Open Sans Regular', sans-serif
+			font-size: 14px 
+		.about
+
+			width: 30%
+			margin-right: 140px 
+		.contact
+			width: 25%
+			margin-right: 200px   
+			img
+				
+				float: left
+				
+				&:last-of-type
+					margin-right: 15px 
+			p
+				margin-left: 40px
+				display: block
+				-webkit-margin-before: 10px
+				-webkit-margin-after: 10px
+			.two
+				margin-top: 30px
+		.email
+			height: 100%
+			width: 10%
+			img
+				float: left
+			p
+				-webkit-margin-before: 0px
+				-webkit-margin-after: 50px
+				-webkit-margin-start: 40px
+				-webkit-margin-end: 0px
+			a
+				font-family: 'Open Sans Regular', sans-serif
+				text-decoration: none
+				color: #FFF
+				font-size: 14px
+				&:hover
+					text-decoration: underline 
+		
+   
+			.mail
+				padding-top: 170px
+		.social
+			a
+				margin-right: 20px 
+.copyright
+	background-color: #5363D8 
+	height: 180px
+	text-align: center
+	font-family: 'Open Sans Regular', sans-serif
+	font-size: 16px
+	color: #b7bffc
+	padding-top: 45px 
+	p
+		-webkit-margin-before: 0px
+		-webkit-margin-after: 45px
+		-webkit-margin-start: 0px
+		-webkit-margin-end: 0px
