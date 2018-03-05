@@ -30,7 +30,10 @@ body {
   z-index: 99999;
   text-align: center;
   height: 100px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  background-color: #FFF; }
   #header img {
     display: inline-block;
     max-width: 100%;
@@ -107,8 +110,8 @@ body {
 .firstscreen {
   background-image: url(../img/bg.png);
   background-repeat: no-repeat;
-  background-position: top;
-  margin: 0;
+  background-position: bottom;
+  height: 705px;
   overflow: hidden; }
   .firstscreen .form {
     text-align: left;
@@ -125,13 +128,13 @@ body {
     position: relative;
     float: left;
     padding-left: 240px;
-    padding-top: 100px;
+    padding-top: 200px;
     margin-right: 90px;
     margin-bottom: 110px; }
   .firstscreen .rightside {
     float: right;
     max-width: 50%;
-    padding-top: 175px;
+    padding-top: 275px;
     margin-right: 60px; }
   .firstscreen h2 {
     font-family: 'Open Sans Bold', sans-serif;
@@ -348,6 +351,10 @@ body {
       position: relative; }
     .gallery .grid .grid-item {
       position: relative; }
+      .gallery .grid .grid-item:before {
+        content: '';
+        transition: all 0.3s ease 0s;
+        transform: scaleX(0); }
       .gallery .grid .grid-item:hover:before {
         display: block;
         position: absolute;
@@ -355,10 +362,12 @@ body {
         opacity: 1;
         height: 100%;
         width: 100%;
-        background-color: rgba(123, 137, 238, 0.5);
+        background-color: rgba(123, 137, 238, 0.8);
         background-image: url(../img/lupa.png);
         background-repeat: no-repeat;
-        background-position: center; }
+        background-position: center;
+        transition: all 0.3s ease 0s;
+        transform: scaleX(1); }
   @media screen and (max-width: 1024px) {
     .gallery .grid .grid-item {
       width: 50%; } }
@@ -433,6 +442,9 @@ body {
         color: #fff; }
 
 .prices {
+  background-image: url("../img/fon.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
   height: 1156px; }
   .prices .wrapper .items {
     -webkit-flex-wrap: wrap;
@@ -443,6 +455,7 @@ body {
     justify-content: space-between;
     padding-top: 100px; }
     .prices .wrapper .items .item {
+      background-color: #FFF;
       width: 370px;
       box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
       -webkit-border-radius: 10px;

@@ -31,8 +31,11 @@ body
 	z-index: 99999  
 	text-align: center  
 	height: 100px
-	overflow: hidden 
-		
+	overflow: hidden
+	position: fixed  
+	width: 100%
+	background-color: #FFF
+	  	
 	img
 		display: inline-block 
 		max-width: 100%
@@ -52,9 +55,11 @@ body
 			text-decoration: none 
 			position: relative  
 			&:hover
+				
 				color: #6666cc
 				text-decoration: none
 				&:after
+					scal 
 					margin-left: 25%  
 					color: green
 					display: block
@@ -63,6 +68,7 @@ body
 					background-color: #6666cc
 					content: ''
 					position: absolute
+					
 		ul 
 			float: left 
 			-webkit-margin-before: 0px
@@ -116,18 +122,21 @@ body
 .firstscreen
 	background-image: url(../img/bg.png)
 	background-repeat: no-repeat
-	background-position: top
+	background-position: bottom
+ 
+	height: 705px 
 	
-	margin: 0 
 	overflow: hidden
 	.form
+
 		text-align: left
 		height: 391px
 		width: 300px
 		background-color: #FFF
 		-webkit-border-radius: 20px 
-		 border-radius: 20px  
-		margin: 0
+		 border-radius: 20px
+		margin: 0  
+		
 		padding-top: 40px 
 		box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
 		  
@@ -138,14 +147,14 @@ body
 		position: relative 
 		float: left
 		padding-left: 240px 
-		padding-top: 100px
+		padding-top: 200px
 		margin-right: 90px
 		margin-bottom: 110px    
 		
 	.rightside
 		float: right
 		max-width: 50%	  
-		padding-top: 175px 
+		padding-top: 275px 
 		margin-right: 60px  
 	h2
 		font-family: 'Open Sans Bold', sans-serif
@@ -385,6 +394,10 @@ body
 	
 		.grid-item
 			position: relative
+			&:before
+				content: ''
+				transition: all 0.3s ease 0s
+				transform: scaleX(0)
 			&:hover:before
 				display: block
 				position: absolute
@@ -392,11 +405,12 @@ body
 				opacity: 1 
 				height: 100% 
 				width: 100%
-				background-color: rgba(123, 137, 238, 0.5)
+				background-color: rgba(123, 137, 238, 0.8)
 				background-image: url(../img/lupa.png)
 				background-repeat: no-repeat
 				background-position: center   
-				
+				transition: all 0.3s ease 0s
+				transform: scaleX(1)
 	
 	@media screen and (max-width: 1024px) 
 		.grid .grid-item 
@@ -478,6 +492,9 @@ body
 				-webkit-margin-end: 0px
 				color: #fff
 .prices
+	background-image: url("../img/fon.png")
+	background-repeat: no-repeat
+	background-position: bottom right
 	height: 1156px 
 	.wrapper
 		.items
@@ -490,14 +507,14 @@ body
 			padding-top: 100px
 			
 			.item
-				
+				background-color: #FFF 
 				width: 370px 
 				box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1)
 				-webkit-border-radius: 10px 
 				border-radius: 10px
 				text-align: center
 				position: relative
-				
+				 
 				&:hover .hd
 					background-color: #475bf1
 				.rast
