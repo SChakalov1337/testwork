@@ -9,12 +9,13 @@
 /* PUT IN YOUR SLIDER ID AND SIZE TO MAKE LOAD BEAUTIFULLY
    ================================================== */
 #featured { 
-    -webkit-border-radius: 10px;
-            border-radius: 10px;
-	width: 940px;
-	height: 450px;
+    
+	width: 300px;
+	height: 100px;
 	background: #fff url('orbit/loading.gif') no-repeat center center;
-	overflow: hidden; }
+	overflow: hidden; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;}
 #featured>img,  
 #featured>div,
 #featured>a { display: none; }
@@ -34,7 +35,7 @@ div.orbit {
     width: 1px;
     height: 1px;
     position: relative;
-    overflow: hidden }
+    overflow: hidden; }
 
 div.orbit>img {
     position: absolute;

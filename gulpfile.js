@@ -6,6 +6,8 @@ var gulp       =require('gulp'),
 	cssnano    =require('gulp-cssnano'),
 	rename     =require('gulp-rename');*/
 
+const autoprefixer = require('gulp-autoprefixer');
+
 gulp.task('sass',function(){
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass())
@@ -40,3 +42,11 @@ gulp.task('watch',['browser-sync','sass'],function(){
 	gulp.watch('app/css/**/*.css',	browserSync.reload);
 	gulp.watch('app/js/**/*.js',	browserSync.reload);
 });
+gulp.task('default', () =>
+    gulp.src('app/css/main.css')
+        .pipe(autoprefixer({
+            browsers: ['last 10 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('dist'))
+);
