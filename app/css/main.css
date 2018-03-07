@@ -9,22 +9,6 @@ body {
   line-height: 20px;
   padding: 0px;
   margin: 0px; }
-  body .slick-prev, body .slick-next {
-    z-index: 1001; }
-  body .slick-prev:before {
-    content: '';
-    height: 60px;
-    width: 60px;
-    background-image: url(../img/arrow2.png);
-    background-repeat: no-repeat;
-    background-position: top; }
-  body .slick-next:before {
-    content: '';
-    height: 60px;
-    width: 60px;
-    background-image: url(../img/arrow2.png);
-    background-repeat: no-repeat;
-    background-position: top; }
 
 .clearfix:after {
   content: "";
