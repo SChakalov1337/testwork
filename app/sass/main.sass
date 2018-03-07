@@ -35,12 +35,16 @@ body
 	position: fixed  
 	width: 100%
 	background-color: #FFF
+	a
+		&:focus
+			outline: none
 	
 	img
 		display: inline-block 
 		max-width: 100%
 		height: auto 
 		padding-top: 16px
+		
 		
 	.navleft
 		margin-left: 124px 
@@ -53,7 +57,9 @@ body
 		a
 			color: #666666
 			text-decoration: none 
-			position: relative  
+			position: relative
+			&:focus
+				outline: none 
 			&:hover
 				
 				color: #6666cc
@@ -75,6 +81,8 @@ body
 		li
 			display: inline-block
 			margin-left: 30px
+			&:focus
+				outline: none
 	.navright
 		font-size: 13px 
 		font-weight: 900  
@@ -87,7 +95,9 @@ body
 
 			color: #666666
 			text-decoration: none 
-			position: relative  
+			position: relative
+			&:focus
+				outline: none  
 			&:hover
 				color: #6666cc
 				text-decoration: none
@@ -111,6 +121,8 @@ body
 		li
 			display: inline-block
 			margin-right: 30px
+			&:focus
+				outline: none
 
 .firstscreen
 	max-width: 100% 
@@ -242,6 +254,8 @@ body
 		color: #FFF
 		&:hover
 			background-color: #475bf1
+		&:focus
+			outline: none
 .program
 	max-width: 100% 
 	padding-top: 125px
@@ -512,6 +526,8 @@ body
 					color: #FFF
 					&:hover
 						background-color: #475bf1
+					&:focus
+						outline: none
 					
 				.txt
 					background-color: #FFF 
@@ -562,16 +578,22 @@ body
 	.otz
 		padding-top: 100px
 		padding-bottom: 100px 
+		&:focus
+			outline: none
 		.wrapper
 			.sl
 				
 				height: 370px 
 				max-width: 100%
+				&:focus
+					outline: none
 				.slick-prev .slick-arrow
 					position: absolute
 				.sl_slide
 					height: 370px 
-					position: relative 
+					position: relative
+					&:focus
+						outline: none 
 					.sam
 						box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.1)
 						overflow: visible
@@ -1010,7 +1032,81 @@ body
 					.mail, .site
 						padding: 0
 						margin-top: 25px 
-
+.slick-prev
+	
+	
+	left: 25%
+	z-index: 100
+	top: 78%
+	
+	&:before
+		content: ''
+		background-image: url(../img/arrowr.svg)
+		background-repeat: no-repeat
+		background-size: 15px
+		background-position: 2px
+		background-color: #fff
+		box-shadow: 3px 0px 14px 0px rgba(0, 0, 0, 0.75)
+		width: 20px
+		position: absolute
+		top: 1px
+		height: 20px
+		border-radius: 20px
+		font-family: none
+		opacity: 1 
 		
+.slick-next
+	
+	z-index: 100
+	top: 78%
+	right: 53%
+	
+	&:before
+		content: ''
+		background-image: url(../img/arrowl.svg)
+		background-repeat: no-repeat
+		background-size: 15px
+		background-position: 4px
+		background-color: #fff
+		box-shadow: 3px 0px 14px 0px rgba(0, 0, 0, 0.75)
+		width: 20px
+		position: absolute
+		top: 1px
+		height: 20px
+		border-radius: 20px
+		font-family: none 
+		opacity: 1 
+.slick-dots
+	top: 30%
+	width: 51px
+	display: flex
+	right: -80px
+	flex-direction: column
+.slick-dots 
+	li 
+		margin-bottom: 20px 
+		button
+			border: 1px solid #777
+			-webkit-border-radius: 50% 
+			border-radius: 50%
+			
+			&:before
+				content: ''
+				width: 10px
+				height: 10px
+				background: #777
+				opacity: 0
+				-webkit-border-radius: 50%
+				border-radius: 50%
+				top: 25%
+				left: 25%
+				
+				margin-bottom: 20px 
+	li.slick-active
+		button
+			border: 1px solid #5b6ceb
+			&:before
+				background-color: #5b6ceb 
+
 
 	

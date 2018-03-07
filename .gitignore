@@ -1,7 +1,6 @@
 # See httphelp.github.comignore-files for more about ignoring files.
 
 # compiled output
-dist
 tmp
 out-tsc
 
