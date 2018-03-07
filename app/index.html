@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/orbit-1.2.3.css">
 	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	
-
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="slick/slick.min.js"></script>			
 	<script type="text/javascript" src="js/jquery.1.7.1.min.js"></script>
 
 	<script type="text/javascript" src="js/jquery.orbit-1.2.3.min.js"></script>	
@@ -41,14 +39,7 @@
 			});
 		});
 	</script>
-	<!-- slick -->
-	<script type="text/javascript">
-		$(document).ready(function(){
- 		 $('.your-class').slick({
-  		  setting-name: setting-value
-		  });
-		});
-	</script>
+	
 	<!--[if IE]>
 			     <style type="text/css">
 			         .timer { display: none !important; }
@@ -65,16 +56,31 @@
 	<title></title>
 </head>
 <body>
+
 	<div id="header" class="head clearfix">
+		<div class="burger">
+		<div class="menu">
+			<ul class="menuul">
+				<li><a href="#about">About us</a></li>
+				<li><a href="#first">Reservation</a></li>
+				<li><a href="#Gallery">Gallery</a></li>
+				<li><a href="#foot">Blog</a></li>
+				<li><a href="#Elements">Elements</a></li>
+				<li><a href="#Reservation">Shop</a></li>
+			</ul>
+			
+		</div>
+		</div>
 		<div class="wrapper">
 			<div class="navleft">
+				
 				<ul>
 					<li><a href="#about">About us</a></li>
 					<li><a href="#first">Reservation</a></li>
 					<li><a href="#Gallery">Gallery</a></li>
 				</ul>
 			</div>
-			<a href="#first"><img src="img/logo.png" alt=""></a>
+			<a href="#first" class="logo"><img src="img/logo.png" alt=""></a>
 			<div class="navright">
 				<ul>
 					<li><a href="#">Blog</a></li>
@@ -90,7 +96,7 @@
 				<div class="form">
 					<h3>Trial Class</h3>
 					<form id="application" action=" application.php" method="POST" name=" application ">
-					   <input name="name" id="applicationName" maxlength="20" placeholder="Enter your name" required />
+					   <input name="name" type="text" id="applicationName" maxlength="20" placeholder="Enter your name" required />
 					   <input name="telephone" type="Tel" id="applicationTelephone" maxlength="20" placeholder="Enter yoyr phone" required/>
 					   <div class="selectform">
 						   <select class="applicationClass" name="applicationClass">
@@ -329,14 +335,23 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="otz">
-		<div class="wrapper">
-			
+		<div class="otz">
+			<div class="wrapper">
+				<div class="sl">
+					<div class="sl_slide"><img src="img/sl1.png" alt="Картинка слайда 1"> 
+				
+					</div>
+					<div class="sl_slide"><img src="img/sl2.png" alt="Картинка слайда 2"></div>
+					<div class="sl_slide"><img src="img/sl3.png" alt="Картинка слайда 3"></div>
+				</div>
+			</div>
+		
 		</div>
+	</div>
+	
 		
 	</div>
-	<div class="foot">
+	<div id="foot" class="foot">
 		<div class="wrapper">
 			<div class="ab">
 				<div class="about">
@@ -387,5 +402,31 @@
 		<p>Copyright © 2016-2017 Yoga calsses</p>
 		<a href="https://dzencode.com/"><img src="img/logo2.png" alt=""></a>
 	</div>
+
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<!-- slick -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+ 		 $('.your-class').slick({
+  		  setting-name: setting-value
+		  });
+		});
+	</script>
+	<script>
+		$(function(){
+			$('.burger').click(function(){
+				$('.menuul').toggleClass('menuul_opened');
+			});
+			$('.menuul a').click(function(){
+				$('.menuul').removeClass('menuul_opened');
+
+			});
+				$(document).click(function(event) {
+					if ($(event.target).closest(".burger").length ) return;
+					$('.menuul').removeClass('menuul_opened');
+					event.stopPropagation();
+				});
+		});
+	</script>
 </body>
 </html>
