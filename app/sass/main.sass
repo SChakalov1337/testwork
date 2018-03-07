@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext')
 @import url(http://allfont.ru/allfont.css?fonts=freestyle-script-normal)
 
 body
@@ -10,7 +10,24 @@ body
 	line-height: 20px
 	padding: 0px
 	margin: 0px 
-	
+	.slick-prev, .slick-next
+		z-index: 1001 
+	.slick-prev
+		&:before
+			content: ''
+			height: 60px
+			width: 60px  
+			background-image: url(../img/arrow2.png)
+			background-repeat: no-repeat
+			background-position: top 
+	.slick-next
+		&:before
+			content: ''
+			height: 60px
+			width: 60px  
+			background-image: url(../img/arrow2.png)
+			background-repeat: no-repeat
+			background-position: top  
 .clearfix
 	&:after
 		content: ""
@@ -184,7 +201,7 @@ body
 			color: #9D9D9D
 		&:focus
 			outline: none
-			border: 0px solid 
+			border: 1px solid #5b6ceb
 	
 	.selectform  
 		padding-left: 10px 
@@ -225,8 +242,9 @@ body
 			font-size: 14px
 			outline: none
 			&:focus
+				color: #5b6ceb
 				outline: none
-				border: 0px solid
+				border: 0px solid 
 	button
 		float: right
 		margin-right: 35px 
@@ -559,9 +577,102 @@ body
 						
 						color: #fff
 	.otz
-		display: flex 
+		padding-bottom: 100px 
 		.wrapper
-		
+			.sl
+				
+				height: 370px 
+				max-width: 100%
+				.slick-prev .slick-arrow
+					position: absolute
+				.sl_slide
+					height: 370px 
+					position: relative 
+					.sam
+						box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.1)
+						overflow: visible
+						height: 250px
+						position: relative
+						display: flex
+						background-color: #FFF
+						padding-top: 40px
+						padding-left: 60px
+						padding-right: 200px
+						-webkit-border-radius: 10px 
+						border-radius: 10px 
+						.img
+							width: 125px
+							height: 125px  
+							padding: 10px
+							-webkit-border-radius: 50%
+							border-radius: 50%
+							border: 1px solid #d7d7d7  
+						.line
+							margin-left: 5% 
+							margin-top: 50px 
+							height: 100px
+							width: 5px 
+							background-color: #d7d7d7
+							overflow: visible
+							display: inline-block 
+						.textarea
+							position: relative
+							height: 150px
+							.kov1
+								position: absolute
+								left: -10px  
+							.kov2
+								position: absolute
+								right: 0
+								 
+							.text
+								height: 95px
+								-ms-text-overflow: clip 
+								text-overflow: clip
+								overflow: hidden 
+								p
+									font-family: 'Open Sans Italic', sans-serif
+									font-size: 14px
+									margin: 0
+									padding: 0px 25px 25px 25px
+
+							.name
+								position: absolute 
+								bottom: 0px
+								padding-left: 25px 
+								h4
+									margin: 0
+									font-family: 'Open Sans Regular', sans-serif
+									font-size: 14px
+									margin-bottom: 10px 
+								h3
+									margin: 0
+									font-family: 'Open Sans Bold', sans-serif
+									font-size: 14px
+							
+					.next
+						display: flex 
+						position: absolute
+						left: 30% 
+						bottom: 50px 
+						.imgnext
+							padding: 0
+							padding-right: 20px 
+							img
+								width: 60px
+								height: 60px 
+						.textareanext
+							margin-top: 10px 
+							h4
+								margin: 0
+								font-family: 'Open Sans Regular', sans-serif
+								font-size: 14px
+								 
+							h3
+								margin: 0
+								font-family: 'Open Sans Bold', sans-serif
+								font-size: 14px
+								margin-bottom: 10px
 .foot
 	height: 450px
 	background-color: #5B6CEB

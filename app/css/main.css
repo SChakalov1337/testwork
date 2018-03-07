@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext");
 @import url(http://allfont.ru/allfont.css?fonts=freestyle-script-normal);
 body {
   font-family: 'Open Sans', sans-serif;
@@ -9,6 +9,22 @@ body {
   line-height: 20px;
   padding: 0px;
   margin: 0px; }
+  body .slick-prev, body .slick-next {
+    z-index: 1001; }
+  body .slick-prev:before {
+    content: '';
+    height: 60px;
+    width: 60px;
+    background-image: url(../img/arrow2.png);
+    background-repeat: no-repeat;
+    background-position: top; }
+  body .slick-next:before {
+    content: '';
+    height: 60px;
+    width: 60px;
+    background-image: url(../img/arrow2.png);
+    background-repeat: no-repeat;
+    background-position: top; }
 
 .clearfix:after {
   content: "";
@@ -166,7 +182,7 @@ body {
       color: #9D9D9D; }
     .firstscreen #applicationName:focus, .firstscreen #applicationTelephone:focus {
       outline: none;
-      border: 0px solid; }
+      border: 1px solid #5b6ceb; }
   .firstscreen .selectform {
     padding-left: 10px;
     margin-left: 30px;
@@ -202,6 +218,7 @@ body {
       font-size: 14px;
       outline: none; }
       .firstscreen .selectform select:focus {
+        color: #5b6ceb;
         outline: none;
         border: 0px solid; }
   .firstscreen button {
@@ -497,7 +514,96 @@ body {
           margin: 0px;
           color: #fff; }
   .prices .otz {
-    display: flex; }
+    padding-bottom: 100px; }
+    .prices .otz .wrapper .sl {
+      height: 370px;
+      max-width: 100%; }
+      .prices .otz .wrapper .sl .slick-prev .slick-arrow {
+        position: absolute; }
+      .prices .otz .wrapper .sl .sl_slide {
+        height: 370px;
+        position: relative; }
+        .prices .otz .wrapper .sl .sl_slide .sam {
+          box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.1);
+          overflow: visible;
+          height: 250px;
+          position: relative;
+          display: flex;
+          background-color: #FFF;
+          padding-top: 40px;
+          padding-left: 60px;
+          padding-right: 200px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px; }
+          .prices .otz .wrapper .sl .sl_slide .sam .img {
+            width: 125px;
+            height: 125px;
+            padding: 10px;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            border: 1px solid #d7d7d7; }
+          .prices .otz .wrapper .sl .sl_slide .sam .line {
+            margin-left: 5%;
+            margin-top: 50px;
+            height: 100px;
+            width: 5px;
+            background-color: #d7d7d7;
+            overflow: visible;
+            display: inline-block; }
+          .prices .otz .wrapper .sl .sl_slide .sam .textarea {
+            position: relative;
+            height: 150px; }
+            .prices .otz .wrapper .sl .sl_slide .sam .textarea .kov1 {
+              position: absolute;
+              left: -10px; }
+            .prices .otz .wrapper .sl .sl_slide .sam .textarea .kov2 {
+              position: absolute;
+              right: 0; }
+            .prices .otz .wrapper .sl .sl_slide .sam .textarea .text {
+              height: 95px;
+              -ms-text-overflow: clip;
+              text-overflow: clip;
+              overflow: hidden; }
+              .prices .otz .wrapper .sl .sl_slide .sam .textarea .text p {
+                font-family: 'Open Sans Italic', sans-serif;
+                font-size: 14px;
+                margin: 0;
+                padding: 0px 25px 25px 25px; }
+            .prices .otz .wrapper .sl .sl_slide .sam .textarea .name {
+              position: absolute;
+              bottom: 0px;
+              padding-left: 25px; }
+              .prices .otz .wrapper .sl .sl_slide .sam .textarea .name h4 {
+                margin: 0;
+                font-family: 'Open Sans Regular', sans-serif;
+                font-size: 14px;
+                margin-bottom: 10px; }
+              .prices .otz .wrapper .sl .sl_slide .sam .textarea .name h3 {
+                margin: 0;
+                font-family: 'Open Sans Bold', sans-serif;
+                font-size: 14px; }
+        .prices .otz .wrapper .sl .sl_slide .next {
+          display: flex;
+          position: absolute;
+          left: 30%;
+          bottom: 50px; }
+          .prices .otz .wrapper .sl .sl_slide .next .imgnext {
+            padding: 0;
+            padding-right: 20px; }
+            .prices .otz .wrapper .sl .sl_slide .next .imgnext img {
+              width: 60px;
+              height: 60px; }
+          .prices .otz .wrapper .sl .sl_slide .next .textareanext {
+            margin-top: 10px; }
+            .prices .otz .wrapper .sl .sl_slide .next .textareanext h4 {
+              margin: 0;
+              font-family: 'Open Sans Regular', sans-serif;
+              font-size: 14px; }
+            .prices .otz .wrapper .sl .sl_slide .next .textareanext h3 {
+              margin: 0;
+              font-family: 'Open Sans Bold', sans-serif;
+              font-size: 14px;
+              margin-bottom: 10px; }
 
 .foot {
   height: 450px;
